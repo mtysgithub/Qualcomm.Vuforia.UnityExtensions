@@ -8,7 +8,7 @@ public class TrackerManagerImpl : TrackerManager
     private StateManager mStateManager = new StateManagerImpl();
     private TextTracker mTextTracker;
 
-    public override bool DeinitTracker<T>() where T: Tracker
+    public override bool DeinitTracker<T>() /*where T: Tracker*/
     {
         if (QCARWrapper.Instance.TrackerManagerDeinitTracker(TypeMapping.GetTypeID(typeof(T))) == 0)
         {
@@ -40,7 +40,7 @@ public class TrackerManagerImpl : TrackerManager
         return this.mStateManager;
     }
 
-    public override T GetTracker<T>() where T: Tracker
+    public override T GetTracker<T>() /*where T: Tracker*/
     {
         if (typeof(T) == typeof(ImageTracker))
         {
@@ -58,7 +58,7 @@ public class TrackerManagerImpl : TrackerManager
         return default(T);
     }
 
-    public override T InitTracker<T>() where T: Tracker
+    public override T InitTracker<T>() /*where T: Tracker*/
     {
         if (QCARRuntimeUtilities.IsQCAREnabled())
         {
