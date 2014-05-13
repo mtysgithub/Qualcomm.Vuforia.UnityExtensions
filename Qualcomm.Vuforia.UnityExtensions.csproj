@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E90AF94-E18E-4443-A751-DA98A81FE6D7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Qualcomm.Vuforia.UnityExtensions</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="CameraDevice.cs" />
+    <Compile Include="ITrackerEventHandler.cs" />
+    <Compile Include="CloudRecoAbstractBehaviour.cs" />
+    <Compile Include="Trackable.cs" />
+    <Compile Include="ExtendedTrackable.cs" />
+    <Compile Include="CylinderTarget.cs" />
+    <Compile Include="IEditorTrackableBehaviour.cs" />
+    <Compile Include="TrackableBehaviour.cs" />
+    <Compile Include="IEditorDataSetTrackableBehaviour.cs" />
+    <Compile Include="DataSetTrackableBehaviour.cs" />
+    <Compile Include="IEditorCylinderTargetBehaviour.cs" />
+    <Compile Include="CylinderTargetAbstractBehaviour.cs" />
+    <Compile Include="DataSet.cs" />
+    <Compile Include="DataSetLoadAbstractBehaviour.cs" />
+    <Compile Include="RectangleData.cs" />
+    <Compile Include="RectangleIntData.cs" />
+    <Compile Include="OrientedBoundingBox.cs" />
+    <Compile Include="ICloudRecoEventHandler.cs" />
+    <Compile Include="ILoadLevelEventHandler.cs" />
+    <Compile Include="IAndroidUnityPlayer.cs" />
+    <Compile Include="BehaviourComponentFactory.cs" />
+    <Compile Include="IBehaviourComponentFactory.cs" />
+    <Compile Include="BGRenderingAbstractBehaviour.cs" />
+    <Compile Include="TrackableImpl.cs" />
+    <Compile Include="ImageTarget.cs" />
+    <Compile Include="CloudRecoImageTargetImpl.cs" />
+    <Compile Include="CylinderTargetImpl.cs" />
+    <Compile Include="IEditorMultiTargetBehaviour.cs" />
+    <Compile Include="ImageTargetType.cs" />
+    <Compile Include="ImageTargetData.cs" />
+    <Compile Include="ImageTargetBuilder.cs" />
+    <Compile Include="CameraDeviceImpl.cs" />
+    <Compile Include="DataSetImpl.cs" />
+    <Compile Include="IEditorImageTargetBehaviour.cs" />
+    <Compile Include="IEditorMarkerBehaviour.cs" />
+    <Compile Include="IEditorRigidBodyTargetBehaviour.cs" />
+    <Compile Include="IEditorTextRecoBehaviour.cs" />
+    <Compile Include="IEditorVirtualButtonBehaviour.cs" />
+    <Compile Include="WordTemplateMode.cs" />
+    <Compile Include="IEditorWordBehaviour.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="ImageImpl.cs" />
+    <Compile Include="ImageTargetBuilderImpl.cs" />
+    <Compile Include="ImageTargetImpl.cs" />
+    <Compile Include="Tracker.cs" />
+    <Compile Include="ImageTracker.cs" />
+    <Compile Include="ImageTrackerImpl.cs" />
+    <Compile Include="InternalRigidBodyTarget.cs" />
+    <Compile Include="IPremiumObjectFactory.cs" />
+    <Compile Include="Marker.cs" />
+    <Compile Include="MarkerImpl.cs" />
+    <Compile Include="MarkerTracker.cs" />
+    <Compile Include="MarkerTrackerImpl.cs" />
+    <Compile Include="MultiTarget.cs" />
+    <Compile Include="MultiTargetImpl.cs" />
+    <Compile Include="WebCamTexAdaptor.cs" />
+    <Compile Include="NullWebCamTexAdaptor.cs" />
+    <Compile Include="PlayModeEditorUtility.cs" />
+    <Compile Include="IPlayModeEditorUtility.cs" />
+    <Compile Include="PremiumObjectFactory.cs" />
+    <Compile Include="QCARManager.cs" />
+    <Compile Include="QCARManagerImpl.cs" />
+    <Compile Include="QCARRenderer.cs" />
+    <Compile Include="QCARRendererImpl.cs" />
+    <Compile Include="QCARUnityImpl.cs" />
+    <Compile Include="TextTracker.cs" />
+    <Compile Include="TextTrackerImpl.cs" />
+    <Compile Include="TypeMapping.cs" />
+    <Compile Include="WebCamTexAdaptorImpl.cs" />
+    <Compile Include="Word.cs" />
+    <Compile Include="WordImpl.cs" />
+    <Compile Include="WordPrefabCreationMode.cs" />
+    <Compile Include="WordManager.cs" />
+    <Compile Include="WordManagerImpl.cs" />
+    <Compile Include="WordResult.cs" />
+    <Compile Include="WordResultImpl.cs" />
+    <Compile Include="WordList.cs" />
+    <Compile Include="WordListImpl.cs" />
+    <Compile Include="IQCARWrapper.cs" />
+    <Compile Include="QCARNativeIosWrapper.cs" />
+    <Compile Include="QCARNullWrapper.cs" />
+    <Compile Include="QCARNativeWrapper.cs" />
+    <Compile Include="QCARWrapper.cs" />
+    <Compile Include="ITextRecoEventHandler.cs" />
+    <Compile Include="IUserDefinedTargetEventHandler.cs" />
+    <Compile Include="IVideoBackgroundEventHandler.cs" />
+    <Compile Include="KeepAliveAbstractBehaviour.cs" />
+    <Compile Include="SetBGCameraLayerAbstractBehaviour.cs" />
+    <Compile Include="StateManager.cs" />
+    <Compile Include="StateManagerImpl.cs" />
+    <Compile Include="TargetFinder.cs" />
+    <Compile Include="TargetFinderImpl.cs" />
+    <Compile Include="TrackableSource.cs" />
+    <Compile Include="TrackableSourceImpl.cs" />
+    <Compile Include="TextureRenderer.cs" />
+    <Compile Include="TrackerManager.cs" />
+    <Compile Include="TrackerManagerImpl.cs" />
+    <Compile Include="VirtualButton.cs" />
+    <Compile Include="VirtualButtonImpl.cs" />
+    <Compile Include="WebCamImpl.cs" />
+    <Compile Include="WebCamProfile.cs" />
+    <Compile Include="ITrackableEventHandler.cs" />
+    <Compile Include="IVirtualButtonEventHandler.cs" />
+    <Compile Include="ImageTargetAbstractBehaviour.cs" />
+    <Compile Include="MarkerAbstractBehaviour.cs" />
+    <Compile Include="MaskOutAbstractBehaviour.cs" />
+    <Compile Include="MultiTargetAbstractBehaviour.cs" />
+    <Compile Include="QCARUnity.cs" />
+    <Compile Include="QCARAbstractBehaviour.cs" />
+    <Compile Include="QCARMacros.cs" />
+    <Compile Include="QCARRuntimeUtilities.cs" />
+    <Compile Include="TextRecoAbstractBehaviour.cs" />
+    <Compile Include="SimpleTargetData.cs" />
+    <Compile Include="TurnOffAbstractBehaviour.cs" />
+    <Compile Include="UserDefinedTargetBuildingAbstractBehaviour.cs" />
+    <Compile Include="VirtualButtonAbstractBehaviour.cs" />
+    <Compile Include="WebCamAbstractBehaviour.cs" />
+    <Compile Include="WordAbstractBehaviour.cs" />
+    <Compile Include="WordFilterMode.cs" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
