@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6F56E89-F61E-4ADE-959D-0CD73691EB09}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Qualcomm.Vuforia.UnityExtensions.Editor</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="UnityEditor">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="MTRenderingChecker.cs" />
+    <Compile Include="PremiumEditor.cs" />
+    <Compile Include="IPremiumEditor.cs" />
+    <Compile Include="AccessorFactory.cs" />
+    <Compile Include="CloudRecoEditor.cs" />
+    <Compile Include="ConfigData.cs" />
+    <Compile Include="ConfigDataManager.cs" />
+    <Compile Include="ConfigParser.cs" />
+    <Compile Include="CylinderMeshFactory.cs" />
+    <Compile Include="TrackableAccessor.cs" />
+    <Compile Include="CylinderTargetAccessor.cs" />
+    <Compile Include="CylinderTargetEditor.cs" />
+    <Compile Include="DataSetLoadEditor.cs" />
+    <Compile Include="DataSetToTrackableMenu.cs" />
+    <Compile Include="ImageTargetAccessor.cs" />
+    <Compile Include="ImageTargetEditor.cs" />
+    <Compile Include="IUnzipper.cs" />
+    <Compile Include="KeepAliveEditor.cs" />
+    <Compile Include="MarkerAccessor.cs" />
+    <Compile Include="MarkerEditor.cs" />
+    <Compile Include="MultiTargetAccessor.cs" />
+    <Compile Include="MultiTargetEditor.cs" />
+    <Compile Include="AndroidManifestOrientationSetter.cs" />
+    <Compile Include="QCARHelpMenu.cs" />
+    <Compile Include="QCARUtilities.cs" />
+    <Compile Include="RigidBodyTargetAccessor.cs" />
+    <Compile Include="SceneManager.cs" />
+    <Compile Include="SetBGCameraLayerEditor.cs" />
+    <Compile Include="TargetDataPostprocessor.cs" />
+    <Compile Include="TextConfigData.cs" />
+    <Compile Include="TextRecoEditor.cs" />
+    <Compile Include="TrackerEditor.cs" />
+    <Compile Include="CylinderDatasetReader.cs" />
+    <Compile Include="UnityPlayModeEditorUtility.cs" />
+    <Compile Include="Unzipper.cs" />
+    <Compile Include="UserDefinedTargetBuilderEditor.cs" />
+    <Compile Include="VirtualButtonEditor.cs" />
+    <Compile Include="WebCamEditor.cs" />
+    <Compile Include="WordEditor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qualcomm.Vuforia.UnityExtensions.csproj">
+      <Project>{1e90af94-e18e-4443-a751-da98a81fe6d7}</Project>
+      <Name>Qualcomm.Vuforia.UnityExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
