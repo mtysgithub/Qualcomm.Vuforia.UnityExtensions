@@ -448,7 +448,7 @@ public abstract class QCARAbstractBehaviour : MonoBehaviour
         }
     }
 
-    private unsafe void UpdateProjection(ScreenOrientation orientation)
+    private /*unsafe*/ void UpdateProjection(ScreenOrientation orientation)
     {
         if (QCARRuntimeUtilities.IsQCAREnabled())
         {
@@ -457,15 +457,22 @@ public abstract class QCARAbstractBehaviour : MonoBehaviour
             Matrix4x4 matrixx = QCARUnity.GetProjectionGL(base.camera.nearClipPlane, base.camera.farClipPlane, this.mProjectionOrientation);
             if (this.mViewportRect.width != Screen.width)
             {
-                ref Matrix4x4 matrixxRef;
-                float num = this.mViewportRect.width / ((float) Screen.width);
-                (matrixxRef = (Matrix4x4) &matrixx)[0] = matrixxRef[0] * num;
+                //ref Matrix4x4 matrixxRef;
+                //Matrix4x4 *matrixxRef = &matrixx;
+                float num = (this.mViewportRect.width / ((float)Screen.width)) * matrixx[0];
+                //(matrixxRef = (Matrix4x4) &matrixx)[0] = matrixxRef[0] * num;
+                //(*matrixxRef)[0] = (*matrixxRef)[0] * num;
+                matrixx[0] = num;
+
             }
             if (this.mViewportRect.height != Screen.height)
             {
-                ref Matrix4x4 matrixxRef2;
-                float num2 = this.mViewportRect.height / ((float) Screen.height);
-                (matrixxRef2 = (Matrix4x4) &matrixx)[5] = matrixxRef2[5] * num2;
+                //ref Matrix4x4 matrixxRef2;
+                //Matrix4x4 *matrixxRef2 = (Matrix4x4 *) &matrixx;
+                float num2 = (this.mViewportRect.height / ((float)Screen.height)) * matrixx[5];
+                //(matrixxRef2 = (Matrix4x4) &matrixx)[5] = matrixxRef2[5] * num2;
+                //(*matrixxRef2)[5] = (*matrixxRef2)[5] * num2;
+                matrixx[5] = num2;
             }
             base.camera.projectionMatrix = matrixx;
         }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.IO;
 
 public class WebCamProfile
 {
-    private readonly ProfileCollection mProfileCollection = PlayModeEditorUtility.Instance.LoadAndParseWebcamProfiles(Path.Combine(Application.dataPath, "Editor/QCAR/WebcamProfiles/profiles.xml"));
+    private readonly ProfileCollection mProfileCollection = PlayModeEditorUtility.Instance.LoadAndParseWebcamProfiles(Path.Combine(UnityEngine.Application.dataPath, "Editor/QCAR/WebcamProfiles/profiles.xml"));
 
     internal ProfileData GetProfile(string webcamName)
     {
