@@ -82,7 +82,7 @@ public class TextRecoEditor : Editor
         EditorGUILayout.Space();
         EditorGUILayout.HelpBox("The filter list allows to specify subset of words that will be detected and tracked.", MessageType.Info);
         string[] displayedOptions = new string[] { "NONE", "BLACK_LIST", "WHITE_LIST" };
-        List<WordFilterMode> list = new List<WordFilterMode> { 0, 1, 2 };
+        List<WordFilterMode> list = new List<WordFilterMode> { WordFilterMode.NONE, WordFilterMode.BLACK_LIST, WordFilterMode.WHITE_LIST };
         int selectedIndex = list.IndexOf(behaviour2.FilterMode);
         selectedIndex = EditorGUILayout.Popup("Filter Mode", selectedIndex, displayedOptions, new GUILayoutOption[0]);
         behaviour2.FilterMode = list[selectedIndex];

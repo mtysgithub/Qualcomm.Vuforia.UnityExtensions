@@ -383,7 +383,7 @@ public class ConfigParser
                     string str3 = parts[m].translation.x.ToString() + " " + parts[m].translation.z.ToString() + " " + parts[m].translation.y.ToString();
                     writer.WriteAttributeString("translation", str3);
                     parts[m].rotation.ToAngleAxis(out num5, out vector);
-                    string[] strArray5 = new string[] { "AD: ", -vector.x.ToString(), " ", -vector.z.ToString(), " ", vector.y.ToString(), " ", num5.ToString() };
+                    string[] strArray5 = new string[] { "AD: ", (-vector.x).ToString(), " ", (-vector.z).ToString(), " ", vector.y.ToString(), " ", num5.ToString() };
                     string str4 = string.Concat(strArray5);
                     writer.WriteAttributeString("rotation", str4);
                     writer.WriteEndElement();
